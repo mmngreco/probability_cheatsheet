@@ -1,4 +1,5 @@
 
+
 The following is a 8-page crash course on probability based off my notes as a Teaching Fellow for Joe Blitzstein's Stat 110 class. It covers a semester's worth of probability, including summaries of main topics, common distributions, problems, tips, and a distribution reference sheet.
 
 
