@@ -163,7 +163,7 @@ Compiled by William Chen (\url{http://wzchen.com}) with contributions from Sebas
         \[P(\textnormal{Evento}) = \frac{\textnormal{número de resultados favorables}}{\textnormal{número de resultados}}\]
 \end{description}
 
-\section{Probability and Thinking Conditionally} \smallskip \hrule height 2pt \smallskip
+\section{Probabilidad y Pensamiento Condicionado} \smallskip \hrule height 2pt \smallskip
 
 % \subsection{Set Theory and Statistics}
 % %To understand probability it helps to understand basic set theory. An \emph{event} is a set in that it is a collection of possible outcomes of an experiment (or a subset of the sample space). With set theory we can talk about things like unions, intersections, or complements of events.
@@ -183,19 +183,19 @@ Compiled by William Chen (\url{http://wzchen.com}) with contributions from Sebas
         %     P({\bf A} \cap {\bf B}) &= 0\\
         %     {\bf A} \cap {\bf B} &= \emptyset
         %   \end{align*}
-        \item[Independent Events] - ${\bf A}$ and ${\bf B}$ are independent if knowing one gives you no information about the other. ${\bf A}$ and ${\bf B}$ are independent if and only if one of the following equivalent statements hold: 
+        \item[Eventos independientes] - ${\bf A}$ y ${\bf B}$ son independientes si el conocimiento de uno no te da ningún tipo de información sobre el otro. ${\bf A}$ y ${\bf B}$ son independientes si y solo si se cumple una de las siguientes declaraciones: 
            \begin{align*} 
             P({\bf A}\cap {\bf B}) &= P({\bf A})P({\bf B}) \\
             P({\bf A}|{\bf B}) &= P({\bf A})
            \end{align*}
-        \item[Conditional Independence] - ${\bf A}$ and ${\bf B}$ are conditionally independent given ${\bf C}$ if: $P({\bf A}\cap {\bf B}|{\bf C}) = P({\bf A}|{\bf C})P({\bf B}|{\bf C})$. Conditional independence does not imply independence, and independence does not imply conditional independence.
+        \item[Independencia Condicional] - ${\bf A}$ y ${\bf B}$ son condicionalmente independientes dado ${\bf C}$ si: $P({\bf A}\cap {\bf B}|{\bf C}) = P({\bf A}|{\bf C})P({\bf B}|{\bf C})$. La independencia condicional no implica independencia y la independencia no implica independencia condicional. 
     \end{description}
     
-\subsection{Unions, Intersections, and Complements}
+\subsection{Uniones, Intersecciones y Complementos}
 
     \begin{description}
 
-        \item[De Morgan's Laws] - Gives a useful relation that can make calculating probabilities of unions easier by relating them to intersections, and vice versa. De Morgan's Law says that the complement is distributive as long as you flip the sign in the middle.
+        \item[Leyes de Morgan] - Nos dan una importante relacion que puede hacer cálculos probabilisticos de uniones más facilmente, poniendolas en relación con sus intersecciones, y vice versa. Las leyes de Morgan dicen que el complemento es distributivo siempre y cuando cambies el signo de en medio.
            \begin{align*} 
         ({\bf A} \cup {\bf B})^c \equiv {\bf A^c} \cap {\bf B^c} \\
         ({\bf A} \cap {\bf B})^c \equiv {\bf A^c} \cup {\bf B^c}
@@ -210,20 +210,20 @@ Compiled by William Chen (\url{http://wzchen.com}) with contributions from Sebas
 
     \end{description}
 
-\subsection{Joint, Marginal, and Conditional Probabilities}
+\subsection{Probabilidad Conjunta, Marginal y Condicional}
 
     \begin{description}
-        \item[Joint Probability] - $P({\bf A} \cap {\bf B}) $ or $P({\bf A}, {\bf B})$ - Probability of ${\bf A}$ \emph{and} ${\bf B}$.
-        \item[Marginal (Unconditional) Probability] - $P({\bf A})$ - Probability of ${\bf A}$
-        \item[Conditional Probability] - $P({\bf A}|{\bf B})$ - Probability of ${\bf A}$ given ${\bf B}$ occurred.
-        \item[Conditional Probability is Probability] - $P({\bf A}|{\bf B})$ is a probability as well, restricting the sample space to ${\bf B}$ instead of $\Omega$. Any theorem that holds for probability also holds for conditional probability.
+        \item[Probabilidad Conjunta] - $P({\bf A} \cap {\bf B}) $ o $P({\bf A}, {\bf B})$ - Probabilidad de ${\bf A}$ \emph{y} ${\bf B}$.
+        \item[Probabilidad (Inondicional) Marginal] - $P({\bf A})$ - Probabilidad ${\bf A}$
+        \item[Probabilidad Condicional] - $P({\bf A}|{\bf B})$ - Probabilidad de ${\bf A}$ dado que ${\bf B}$ ocurrió.
+        \item[La Probabilidad Condicional es Probabilidad] - $P({\bf A}|{\bf B})$ es una probabilidad también, restringiendo el tamaño de la muestra a ${\bf B}$ en lugar de $\Omega$. Cualquier teorema que se cumpla para la probabilidad se mantiene para la probabilidad condicionada.
     %     \item[Bayes' Rule] - Bayes' Rule unites marginal, joint, and conditional probabilities. We use this as the definition of conditional probability.
     % \[P({\bf A}|{\bf B}) = \frac{P({\bf A} \cap {\bf B})}{P({\bf B})} = \frac{P({\bf B}|{\bf A})P({\bf A})}{P({\bf B})}\]
     \end{description}
 
-\subsection{Simpson's Paradox}
-\[P(A\mid B,C) < P(A\mid B^c, C) \textnormal{ and } P(A\mid B, C^c) < P(A \mid B^c, C^c)\]
-\[ \textnormal{yet still, } P(A\mid B) > P(A \mid B^c) \]
+\subsection{Paradoja de Simpson}
+\[P(A\mid B,C) < P(A\mid B^c, C) \textnormal{ y } P(A\mid B, C^c) < P(A \mid B^c, C^c)\]
+\[ \textnormal{y sin embargo, } P(A\mid B) > P(A \mid B^c) \]
     
 \section{Bayes' Rule and Law of Total Probability}\smallskip \hrule height 2pt \smallskip
 Law of Total Probability with partitioning set ${\bf B}_1, {\bf B}_2, {\bf B}_3, ... {\bf B}_n$ and with extra conditioning (just add C!)
