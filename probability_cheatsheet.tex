@@ -120,9 +120,9 @@ Compiled by William Chen (\url{http://wzchen.com}) with contributions from Sebas
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Counting}\smallskip \hrule height 2pt \smallskip
+\section{Conteo}\smallskip \hrule height 2pt \smallskip
 
-% \subsection{Set Theory}
+ \subsection{Teoría de Conjuntos}
 
 % \begin{description}
 %     \item[Sets and Subsets] - A set is a collection of distinct objects. $A$ is a subset of $B$ if every element of $A$ is also included in $B$.
@@ -143,23 +143,23 @@ Compiled by William Chen (\url{http://wzchen.com}) with contributions from Sebas
 % \end{description}
 
 \begin{description}
-    \item[Multiplication Rule] - Let's say we have a compound experiment (an experiment with multiple components). If the 1st component has $n_1$ possible outcomes, the 2nd component has $n_2$ possible outcomes, and the $r$th component has $n_r$ possible outcomes, then overall there are $n_1n_2 \dots n_r$ possibilities for the whole experiment.
-    \item[Sampling Table] - The sampling tables describes the different ways to take a sample of size $k$ out of a population of size $n$. The column names denote whether order matters or not.\\
+    \item[Regla de la multiplicación] - Supongamos que tenemos un experimento compuesto (un experimento con múltiples componentes). Si el componente 1 tiene $n_1$ resultados posibles, el segundo componente tiene $n_2$ resultados posibles, y el componente r tiene $n_r$ resultados posibles, entonces en general, hay $n_1 n_2 \dots n_r$ posibilidades para todo el experimento.
+    \item[Tabla de Muestreos] - Las tablas de muestreo describen las diferentes maneras posibles de tomar una muestra de tamaño $k$ de una población de tamaño $n$. Los nombres de cada columna denotan si el orden importa o no.\\
         %\begin{table}[H]
         \begin{center}
                 %\setlength{\extrarowheight}{1pt}
             \begin{tabular}{r|cc}
-                 & \textbf{Matters} & \textbf{Not Matter} \\ \hline
-                \textbf{With Replacement} & $\displaystyle n^k$ & $\displaystyle{n+k-1 \choose k}$ \\
-                \textbf{Without Replacement} & $\displaystyle\frac{n!}{(n - k)!}$ & $\displaystyle{n \choose k}$
+                 & \textbf{Importa} & \textbf{No Importa} \\ \hline
+                \textbf{Con Reemplazo} & $\displaystyle n^k$ & $\displaystyle{n+k-1 \choose k}$ \\
+                \textbf{Sin Reemplazo} & $\displaystyle\frac{n!}{(n - k)!}$ & $\displaystyle{n \choose k}$
             \end{tabular}
         \end{center}
         %\end{table}
     % \item[Experiments/Outcomes] - An experiment generates an outcome from a pre-determined list. For example, a dice roll generates outcomes in the set $\{1, 2, 3, 4, 5, 6\}$
     % \item[Sample Space] - The sample space, denoted $\Omega$, is the set of possible outcomes. Note that the probability of this event is 1, since something in the sample space will always occur.
     % \item[Event] - An event is a subset of the sample space, or a collection of possible outcomes of an experiment. We say that the event has occurred if any of the outcomes in the event have happened.
-    \item[Na\"{i}ve Definition of Probability] - \emph{If the likelihood of each outcome is equal}, the probability of any event happening is:
-        \[P(\textnormal{Event}) = \frac{\textnormal{number of favorable outcomes}}{\textnormal{number of outcomes}}\]
+    \item[Ingenua Definición de Probabilidad] - \emph{Si la probabilidad de cada resultado es igual}, la probabilidad de que suceda cualquier evento es:
+        \[P(\textnormal{Evento}) = \frac{\textnormal{número de resultados favorables}}{\textnormal{número de resultados}}\]
 \end{description}
 
 \section{Probability and Thinking Conditionally} \smallskip \hrule height 2pt \smallskip
