@@ -225,8 +225,8 @@ Compiled by William Chen (\url{http://wzchen.com}) with contributions from Sebas
 \[P(A\mid B,C) < P(A\mid B^c, C) \textnormal{ y } P(A\mid B, C^c) < P(A \mid B^c, C^c)\]
 \[ \textnormal{y sin embargo, } P(A\mid B) > P(A \mid B^c) \]
     
-\section{Bayes' Rule and Law of Total Probability}\smallskip \hrule height 2pt \smallskip
-Law of Total Probability with partitioning set ${\bf B}_1, {\bf B}_2, {\bf B}_3, ... {\bf B}_n$ and with extra conditioning (just add C!)
+\section{Teorema de Bayes y La Probabilidad Total}\smallskip \hrule height 2pt \smallskip
+Ley de la Probabilidad Total con un conjunto dividido ${\bf B}_1, {\bf B}_2, {\bf B}_3, ... {\bf B}_n$ y con una condición extra (solo se agrega C)
 \begin{align*} 
     P({\bf A}) &= P({\bf A} | {\bf B}_1)P({\bf B}_1) + P({\bf A} | {\bf B}_2)P({\bf B}_2) + ...  P({\bf A} | {\bf B}_n)P({\bf B}_n)\\
     P({\bf A}) &= P({\bf A} \cap {\bf B}_1)+ P({\bf A} \cap {\bf B}_2)+ ...  P({\bf A} \cap {\bf B}_n)\\
@@ -234,14 +234,14 @@ Law of Total Probability with partitioning set ${\bf B}_1, {\bf B}_2, {\bf B}_3,
     P({\bf A}| {\bf C}) &= P({\bf A} \cap {\bf B}_1 | {\bf C})+ P({\bf A} \cap {\bf B}_2 | {\bf C})+ ...  P({\bf A} \cap {\bf B}_n | {\bf C})
 \end{align*} 
 
-Law of Total Probability with ${\bf B}$ and ${\bf B^c}$ (special case of a partitioning set), and with extra conditioning (just add C!)
+Ley de la Probabilidad Total con ${\bf B}$ y ${\bf B^c}$ (Caso especial de un conjunto divido), y con una condición extra (solo se agrega C)
    \begin{align*} 
 P({\bf A}) &= P({\bf A} | {\bf B})P({\bf B}) + P({\bf A} | {\bf B^c})P({\bf B^c}) \\
 P({\bf A}) &= P({\bf A} \cap {\bf B})+ P({\bf A} \cap {\bf B^c}) \\
 P({\bf A} | {\bf C}) &= P({\bf A} | {\bf B}, {\bf C})P({\bf B} | {\bf C}) + P({\bf A} | {\bf B^c}, {\bf C})P({\bf B^c} | {\bf C}) \\
 P({\bf A} | {\bf C}) &= P({\bf A} \cap {\bf B} | {\bf C})+ P({\bf A} \cap {\bf B^c} | {\bf C})
    \end{align*} 
-Bayes' Rule, and with extra conditioning (just add C!)
+El Teorema de Bayes, con una condición extra (solo se agrega C)
          \[P({\bf A}|{\bf B}) = \frac{P({\bf A} \cap {\bf B})}{P({\bf B})} = \frac{P({\bf B}|{\bf A})P({\bf A})}{P({\bf B})}\]
          \[P({\bf A}|{\bf B}, {\bf C}) = \frac{P({\bf A} \cap {\bf B} | {\bf C})}{P({\bf B} | {\bf C})} = \frac{P({\bf B}|{\bf A}, {\bf C})P({\bf A} | {\bf C})}{P({\bf B} | {\bf C})}\]
 Odds Form of Bayes' Rule, and with extra conditioning (just add C!)
