@@ -1,4 +1,5 @@
 \documentclass[10pt,landscape]{article}
+\usepackage[utf8]{inputenc}
 \usepackage{multicol}
 \usepackage{calc}
 \usepackage{ifthen}
@@ -120,9 +121,9 @@ Compiled by William Chen (\url{http://wzchen.com}) with contributions from Sebas
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Counting}\smallskip \hrule height 2pt \smallskip
+\section{Conteo}\smallskip \hrule height 2pt \smallskip
 
-% \subsection{Set Theory}
+ \subsection{Teoría de Conjuntos}
 
 % \begin{description}
 %     \item[Sets and Subsets] - A set is a collection of distinct objects. $A$ is a subset of $B$ if every element of $A$ is also included in $B$.
@@ -143,26 +144,26 @@ Compiled by William Chen (\url{http://wzchen.com}) with contributions from Sebas
 % \end{description}
 
 \begin{description}
-    \item[Multiplication Rule] - Let's say we have a compound experiment (an experiment with multiple components). If the 1st component has $n_1$ possible outcomes, the 2nd component has $n_2$ possible outcomes, and the $r$th component has $n_r$ possible outcomes, then overall there are $n_1n_2 \dots n_r$ possibilities for the whole experiment.
-    \item[Sampling Table] - The sampling tables describes the different ways to take a sample of size $k$ out of a population of size $n$. The column names denote whether order matters or not.\\
+    \item[Regla de la multiplicación] - Supongamos que tenemos un experimento compuesto (un experimento con múltiples componentes). Si el componente 1 tiene $n_1$ resultados posibles, el segundo componente tiene $n_2$ resultados posibles, y el componente r tiene $n_r$ resultados posibles, entonces en general, hay $n_1 n_2 \dots n_r$ posibilidades para todo el experimento.
+    \item[Tabla de Muestreos] - Las tablas de muestreo describen las diferentes maneras posibles de tomar una muestra de tamaño $k$ de una población de tamaño $n$. Los nombres de cada columna denotan si el orden importa o no.\\
         %\begin{table}[H]
         \begin{center}
                 %\setlength{\extrarowheight}{1pt}
             \begin{tabular}{r|cc}
-                 & \textbf{Matters} & \textbf{Not Matter} \\ \hline
-                \textbf{With Replacement} & $\displaystyle n^k$ & $\displaystyle{n+k-1 \choose k}$ \\
-                \textbf{Without Replacement} & $\displaystyle\frac{n!}{(n - k)!}$ & $\displaystyle{n \choose k}$
+                 & \textbf{Importa} & \textbf{No Importa} \\ \hline
+                \textbf{Con Reemplazo} & $\displaystyle n^k$ & $\displaystyle{n+k-1 \choose k}$ \\
+                \textbf{Sin Reemplazo} & $\displaystyle\frac{n!}{(n - k)!}$ & $\displaystyle{n \choose k}$
             \end{tabular}
         \end{center}
         %\end{table}
     % \item[Experiments/Outcomes] - An experiment generates an outcome from a pre-determined list. For example, a dice roll generates outcomes in the set $\{1, 2, 3, 4, 5, 6\}$
     % \item[Sample Space] - The sample space, denoted $\Omega$, is the set of possible outcomes. Note that the probability of this event is 1, since something in the sample space will always occur.
     % \item[Event] - An event is a subset of the sample space, or a collection of possible outcomes of an experiment. We say that the event has occurred if any of the outcomes in the event have happened.
-    \item[Na\"{i}ve Definition of Probability] - \emph{If the likelihood of each outcome is equal}, the probability of any event happening is:
-        \[P(\textnormal{Event}) = \frac{\textnormal{number of favorable outcomes}}{\textnormal{number of outcomes}}\]
+    \item[Ingenua Definición de Probabilidad] - \emph{Si la probabilidad de cada resultado es igual}, la probabilidad de que suceda cualquier evento es:
+        \[P(\textnormal{Evento}) = \frac{\textnormal{número de resultados favorables}}{\textnormal{número de resultados}}\]
 \end{description}
 
-\section{Probability and Thinking Conditionally} \smallskip \hrule height 2pt \smallskip
+\section{Probabilidad y Pensamiento Condicionado} \smallskip \hrule height 2pt \smallskip
 
 % \subsection{Set Theory and Statistics}
 % %To understand probability it helps to understand basic set theory. An \emph{event} is a set in that it is a collection of possible outcomes of an experiment (or a subset of the sample space). With set theory we can talk about things like unions, intersections, or complements of events.
@@ -182,19 +183,19 @@ Compiled by William Chen (\url{http://wzchen.com}) with contributions from Sebas
         %     P({\bf A} \cap {\bf B}) &= 0\\
         %     {\bf A} \cap {\bf B} &= \emptyset
         %   \end{align*}
-        \item[Independent Events] - ${\bf A}$ and ${\bf B}$ are independent if knowing one gives you no information about the other. ${\bf A}$ and ${\bf B}$ are independent if and only if one of the following equivalent statements hold: 
+        \item[Eventos independientes] - ${\bf A}$ y ${\bf B}$ son independientes si el conocimiento de uno no te da ningún tipo de información sobre el otro. ${\bf A}$ y ${\bf B}$ son independientes si y solo si se cumple una de las siguientes declaraciones: 
            \begin{align*} 
             P({\bf A}\cap {\bf B}) &= P({\bf A})P({\bf B}) \\
             P({\bf A}|{\bf B}) &= P({\bf A})
            \end{align*}
-        \item[Conditional Independence] - ${\bf A}$ and ${\bf B}$ are conditionally independent given ${\bf C}$ if: $P({\bf A}\cap {\bf B}|{\bf C}) = P({\bf A}|{\bf C})P({\bf B}|{\bf C})$. Conditional independence does not imply independence, and independence does not imply conditional independence.
+        \item[Independencia Condicional] - ${\bf A}$ y ${\bf B}$ son condicionalmente independientes dado ${\bf C}$ si: $P({\bf A}\cap {\bf B}|{\bf C}) = P({\bf A}|{\bf C})P({\bf B}|{\bf C})$. La independencia condicional no implica independencia y la independencia no implica independencia condicional. 
     \end{description}
     
-\subsection{Unions, Intersections, and Complements}
+\subsection{Uniones, Intersecciones y Complementos}
 
     \begin{description}
 
-        \item[De Morgan's Laws] - Gives a useful relation that can make calculating probabilities of unions easier by relating them to intersections, and vice versa. De Morgan's Law says that the complement is distributive as long as you flip the sign in the middle.
+        \item[Leyes de Morgan] - Nos dan una importante relacion que puede hacer cálculos probabilisticos de uniones más facilmente, poniendolas en relación con sus intersecciones, y vice versa. Las leyes de Morgan dicen que el complemento es distributivo siempre y cuando cambies el signo de en medio.
            \begin{align*} 
         ({\bf A} \cup {\bf B})^c \equiv {\bf A^c} \cap {\bf B^c} \\
         ({\bf A} \cap {\bf B})^c \equiv {\bf A^c} \cup {\bf B^c}
@@ -209,20 +210,20 @@ Compiled by William Chen (\url{http://wzchen.com}) with contributions from Sebas
 
     \end{description}
 
-\subsection{Joint, Marginal, and Conditional Probabilities}
+\subsection{Probabilidad Conjunta, Marginal y Condicional}
 
     \begin{description}
-        \item[Joint Probability] - $P({\bf A} \cap {\bf B}) $ or $P({\bf A}, {\bf B})$ - Probability of ${\bf A}$ \emph{and} ${\bf B}$.
-        \item[Marginal (Unconditional) Probability] - $P({\bf A})$ - Probability of ${\bf A}$
-        \item[Conditional Probability] - $P({\bf A}|{\bf B})$ - Probability of ${\bf A}$ given ${\bf B}$ occurred.
-        \item[Conditional Probability is Probability] - $P({\bf A}|{\bf B})$ is a probability as well, restricting the sample space to ${\bf B}$ instead of $\Omega$. Any theorem that holds for probability also holds for conditional probability.
+        \item[Probabilidad Conjunta] - $P({\bf A} \cap {\bf B}) $ o $P({\bf A}, {\bf B})$ - Probabilidad de ${\bf A}$ \emph{y} ${\bf B}$.
+        \item[Probabilidad (Inondicional) Marginal] - $P({\bf A})$ - Probabilidad ${\bf A}$
+        \item[Probabilidad Condicional] - $P({\bf A}|{\bf B})$ - Probabilidad de ${\bf A}$ dado que ${\bf B}$ ocurrió.
+        \item[La Probabilidad Condicional es Probabilidad] - $P({\bf A}|{\bf B})$ es una probabilidad también, restringiendo el tamaño de la muestra a ${\bf B}$ en lugar de $\Omega$. Cualquier teorema que se cumpla para la probabilidad se mantiene para la probabilidad condicionada.
     %     \item[Bayes' Rule] - Bayes' Rule unites marginal, joint, and conditional probabilities. We use this as the definition of conditional probability.
     % \[P({\bf A}|{\bf B}) = \frac{P({\bf A} \cap {\bf B})}{P({\bf B})} = \frac{P({\bf B}|{\bf A})P({\bf A})}{P({\bf B})}\]
     \end{description}
 
-\subsection{Simpson's Paradox}
-\[P(A\mid B,C) < P(A\mid B^c, C) \textnormal{ and } P(A\mid B, C^c) < P(A \mid B^c, C^c)\]
-\[ \textnormal{yet still, } P(A\mid B) > P(A \mid B^c) \]
+\subsection{Paradoja de Simpson}
+\[P(A\mid B,C) < P(A\mid B^c, C) \textnormal{ y } P(A\mid B, C^c) < P(A \mid B^c, C^c)\]
+\[ \textnormal{y sin embargo, } P(A\mid B) > P(A \mid B^c) \]
     
 \section{Bayes' Rule and Law of Total Probability}\smallskip \hrule height 2pt \smallskip
 Law of Total Probability with partitioning set ${\bf B}_1, {\bf B}_2, {\bf B}_3, ... {\bf B}_n$ and with extra conditioning (just add C!)
