@@ -21,8 +21,8 @@
 \setlist[description]{leftmargin=0pt}
 \usepackage{xfrac}
 \usepackage[pdftex,
-            pdfauthor={William Chen},
-            pdftitle={Probability Cheatsheet},
+            pdfauthor={William Chen}, % agregar traductores.
+            pdftitle={Resumen de Probabilidad},
             pdfsubject={An 8-page cheat sheet pdf and reference guide originally made for Stat 110, Harvard's Introduction to Probability Class. Formulas and equations for your statistics class.},
             pdfkeywords={probability} {statistics} {cheatsheet} {pdf} {cheat} {sheet} {formulas} {equations}
             ]{hyperref}
@@ -294,12 +294,12 @@ $P(X=x, Y=y) = P(X = x)P(Y = y)$
 \subsection{Distributions}
 \begin{description}
 
-\item[Probability Mass Function (PMF)] (Discrete Only) is a function that takes in the value $x$, and gives the probability that a random variable takes on the value $x$. The PMF is a positive-valued function, and $\sum_xP(X=x) = 1$
+\item[Función de Cuantía (PMF)] (Sólo caso discreto) es una función que toma el valor de $x$, devuelve la probabilidad de que la variable aleatoria toma ese valor $x$. La PMF es una función con valores positivos, y $\sum_xP(X=x) = 1$
 \begin{center}
 $P_X(x) = P(X=x)$
 \end{center}
 
-\item[Cumulative Distribution Function (CDF)] is a function that takes in the value $x$, and gives the probability that a random variable takes on the value at most $x$.
+\item[Función de Densidad (CDF)] es una función que para valores $x$, devuelve la probabilidad que una variable aleatoria toma hasta ese valor $x$.
 \[F(x) = P(X \leq x)\]
 
 
@@ -308,17 +308,15 @@ $P_X(x) = P(X=x)$
 
 \subsection{Expected Value, Linearity, and Symmetry}
 \begin{description}
-\item[Expected Value] (aka \emph{mean}, \emph{expectation}, or \emph{average}) can be thought of as the ``weighted average" of the possible outcomes of our random variable. Mathematically, if $x_1, x_2, x_3, \dots$ are all of the possible values that $X$ can take, the expected value of $X$ can be calculated as follows:
+\item[Valor Esperado] (aka \emph{media}, \emph{Esperanza}, o \emph{promedio}) puede ser pensado como la ``media ponderada" de los posibles resultados de nuestra variable aleatoria. Matemáticamente, si $x_1, x_2, x_3, \dots$ son todos los posibles valores que $X$ puede tomar, el valor esperado de $X$ puede calcularse como:
 \begin{center}
 $E(X) = \sum\limits_{i}x_iP(X=x_i)$
 \end{center}
-Note that for \emph{any} $X$ and $Y$, $a$ and $b$ scaling coefficients and $c$ is our constant, the following property of \textbf{Linearity of Expectation} holds:
+Nótese que \emph{cualquier} $X$ e $Y$, $a$ y $b$ coeficientes escalares y $c$ es constante, la siguiente propieda de \textbf{Linealidad de la Esperanza} mantiene:
 
 \[E(aX + bY + c) = aE(X) + bE(Y) + c \]
 
-If two Random Variables have the same distribution, \emph{even when they are dependent} by the property of \textbf{Symmetry} their expected values are equal.
-
-
+Si dos o mas variables aleatorias tiene la misma distribución, \emph{incluso cuando son dependientes} por la propiedad de \textbf{Simetría} se esperan que sus valores sean iguales.
 
 \item[Conditional Expected Value] is calculated like expectation, only conditioned on any event A. \begin{center}
 $\ E(X | A) = \sum\limits_{x}xP(X=x | A)$
