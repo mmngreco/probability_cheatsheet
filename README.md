@@ -1,29 +1,27 @@
 
 
-The following is a 8-page crash course on probability based off my notes as a Teaching Fellow for Joe Blitzstein's Stat 110 class. It covers a semester's worth of probability, including summaries of main topics, common distributions, problems, tips, and a distribution reference sheet.
+El siguiente curso intensivo de de n-paginas sobre probabilidad basado en en los apuntes orignales [enlace], es una traducción del documento latex por @mmngreco y @caoticaeconomia.
 
-
-Links
 -------
 
 * [Probability Cheatsheet PDF](http://www.wzchen.com/probability-cheatsheet/)
 
 
-Screenshots
+Capturas de Pantalla
 -------
 
 ![First Page](http://i.imgur.com/HcQaydH.jpg)
 ![Second Page](http://i.imgur.com/HDwSPDk.jpg)
 
 
-License
+Licencia
 -------
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.][by-nc-sa].
 
 [![Creative Commons License][by-nc-sa-img]][by-nc-sa]
 
-Planned Additions
+Futuras Adiciones
 -------
 
 * Monty Hall
@@ -92,10 +90,14 @@ Added
 
 * Probability Cheatsheet
 
-Contact Me
+CONTACTO:
 -------
 
-I welcome comments, suggestions, and corrections! You can message me on [Quora](https://www.quora.com/William-Chen-6), contact me via [my website](http://www.wzchen.com/) or suggest changes directly in the [github repo](https://github.com/wzchen/probability_cheatsheet) source code.
+Se agradecen comentarios y sugerencias.
+
+- [Mi web personal](http://mmngreco.tumblr.com)
+- @mmngreco en twitter
+
 
 [by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [by-nc-sa-img]: http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
