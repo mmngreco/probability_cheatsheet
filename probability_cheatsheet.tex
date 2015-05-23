@@ -289,30 +289,30 @@ $P(X=x, Y=y) = P(X = x)P(Y = y)$
 
 \end{description}
 
-\section{Expected Value and Indicators}\smallskip \hrule height 2pt \smallskip
+\section{Valor Esperado e Indicadores}\smallskip \hrule height 2pt \smallskip
 
-\subsection{Distributions}
+\subsection{Distribuciones}
 \begin{description}
 
-\item[Función de Cuantía (PMF)] (Sólo caso discreto) es una función que toma el valor de $x$, devuelve la probabilidad de que la variable aleatoria toma ese valor $x$. La PMF es una función con valores positivos, y $\sum_xP(X=x) = 1$
+\item[Función de Cuantía (PMF)] (Sólo caso discreto) es una función que toma hasta el valor de $x$, la probabilidad de que la variable aleatoria tome ese valor $x$ o menor. La PMF es una función con valores positivos, y $\sum_xP(X=x) = 1$
 \begin{center}
 $P_X(x) = P(X=x)$
 \end{center}
 
-\item[Función de Densidad (CDF)] es una función que para valores $x$, devuelve la probabilidad que una variable aleatoria toma hasta ese valor $x$.
+\item[Función de Densidad (CDF)] es una función que para valores $x$, devuelve la probabilidad que una variable aleatoria sea $x$.
 \[F(x) = P(X \leq x)\]
 
 
 \end{description}
 
 
-\subsection{Expected Value, Linearity, and Symmetry}
+\subsection{Valor Esperado, Linealidad, y Simetría}
 \begin{description}
 \item[Valor Esperado] (aka \emph{media}, \emph{Esperanza}, o \emph{promedio}) puede ser pensado como la ``media ponderada" de los posibles resultados de nuestra variable aleatoria. Matemáticamente, si $x_1, x_2, x_3, \dots$ son todos los posibles valores que $X$ puede tomar, el valor esperado de $X$ puede calcularse como:
 \begin{center}
 $E(X) = \sum\limits_{i}x_iP(X=x_i)$
 \end{center}
-Nótese que \emph{cualquier} $X$ e $Y$, $a$ y $b$ coeficientes escalares y $c$ es constante, la siguiente propieda de \textbf{Linealidad de la Esperanza} mantiene:
+Nótese que para\emph{cualquier} $X$ e $Y$, $a$ y $b$ coeficientes escalares, y $c$ es constante, la siguiente propiedad de \textbf{Linealidad de la Esperanza} mantiene:
 
 \[E(aX + bY + c) = aE(X) + bE(Y) + c \]
 
@@ -327,23 +327,23 @@ $\ E(X | A) = \sum\limits_{x}xP(X=x | A)$
 \subsection{Indicator Random Variables}
 \begin{description}
 \item[Indicador de Variable Aleatoria] es una variable aleatoria que toma valor 1 o 0. El indicador es siempre un indicador de algún evento. Si se produce el evento, el indicador es 1, de lo contrario es 0. Son útiles para muchos de los problemas que involucran el recuento y valor esperado. 
-\item[Distribución] $I_A \sim \Bern(p)$ donde $p = P(A)$
-\item[Fundamental Bridge] The expectation of an indicator for $A$ is the probability of the event. $E(I_A) = P(A)$. Notation:
+\item[Distribución] $I_A \sim \Bern(p)$ dónde $p = P(A)$
+\item[Fundamental Bridge] La esperanza para un indicador $A$ es la probabilidad del evento. $E(I_A) = P(A)$. Notación:
 
 \[
 I_A =
  \begin{cases}
-   1 & \text{A occurs} \\
-   0 & \text{A does not occur}
+   1 & \text{A ocurra} \\
+   0 & \text{A no ocurra}
   \end{cases}
 \]
 \end{description}
 
-\subsection{Variance}
+\subsection{Varianza}
 \[\var(X) = E(X^2) - [E(X)]^2\]
 
-\subsection{Expectation and Independence}
-If $X$ and $Y$ are independent, then
+\subsection{Esperanza e Independencia}
+Si $X$ e $Y$ son independientes, entonces
 \[E(XY) = E(X)E(Y)\]
 
 \section{Continuous RVs, LotUS, and UoU}\smallskip \hrule height 2pt \smallskip
